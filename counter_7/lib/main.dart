@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:counter_7/tambah_budget.dart';
 import 'package:counter_7/data_budget.dart';
 import 'package:counter_7/user.dart';
+import 'package:counter_7/drawer.dart';
 
 void main() {
   runApp(const MyApp());
@@ -51,39 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      drawer: Drawer(
-      child: Column(
-        children: [
-          ListTile(
-            title: const Text('counter_7'),
-            onTap: () {
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(builder: (context) => const MyHomePage()),
-              );
-            },
-          ),
-          ListTile(
-            title: const Text('Tambah Budget'),
-            onTap: () {
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(builder: (context) => const TambahBudgetPage()),
-              );
-            },
-          ),
-          ListTile(
-            title: const Text('Data Budget'),
-            onTap: () {
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(builder: (context) => const DataBudgetPage()),
-              );
-            },
-          ),
-        ],
-      ),
-    ),
+      drawer: drawer(context),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
