@@ -71,12 +71,19 @@ class _WatchlistPage extends State<WatchlistPage>{
                   decoration: BoxDecoration(
                     color: Colors.white, 
                     borderRadius: BorderRadius.circular(15.0),
-                    boxShadow: const [
+                    boxShadow: (snapshot.data![index].fields.movieWatched == "Yes") ? 
+                    const [
                       BoxShadow(
-                        color: Colors.black,
+                        color:  Colors.blue,
                         blurRadius: 2.0
-                      )
-                    ],
+                      ) 
+                    ] : const [
+                      BoxShadow(
+                        color:  Colors.red,
+                        blurRadius: 2.0
+                      ) 
+                    ]
+                    ,
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -85,7 +92,7 @@ class _WatchlistPage extends State<WatchlistPage>{
                       TextButton(
                         onPressed: () {
                           Detail._temp = snapshot.data![index].fields;
-                          Navigator.push(
+                          Navigator.pushReplacement(
                             context, 
                             MaterialPageRoute(builder: (context) => const WatchlistDetailPage()),
                             );

@@ -1,5 +1,6 @@
 import 'package:counter_7/Model/my_watchlist_json.dart';
 import 'package:counter_7/Page/my_watchlist.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 
@@ -24,7 +25,7 @@ class _WatchlistDetail extends State<WatchlistDetailPage>{
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
@@ -138,6 +139,30 @@ class _WatchlistDetail extends State<WatchlistDetailPage>{
           ),     
         ]
       ),
+    floatingActionButton: Padding (
+      padding: const EdgeInsets.only(left: 30, bottom: 10),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          TextButton(
+            onPressed: () {
+              Navigator.pushReplacement(
+                context, 
+                MaterialPageRoute(builder: (context) => const WatchlistPage()),
+              ); 
+            },
+            child: const Text(
+                "Back",
+                style: TextStyle(color: Colors.white),
+            ),
+            style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.blue),
+            ),
+          )
+        ],
+      ),
+    ),
     );
   }
 
