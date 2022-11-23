@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:counter_7/tambah_budget.dart';
-import 'package:counter_7/data_budget.dart';
-import 'package:counter_7/user.dart';
-import 'package:counter_7/drawer.dart';
+import 'package:counter_7/Page/tambah_budget.dart';
+import 'package:counter_7/Page/data_budget.dart';
+import 'package:counter_7/Model/user.dart';
+
+import 'Page/drawer.dart';
+ 
 
 void main() {
   runApp(const MyApp());

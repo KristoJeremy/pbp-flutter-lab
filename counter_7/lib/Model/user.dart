@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:counter_7/main.dart';
-import 'package:counter_7/data_budget.dart';
-import 'package:counter_7/tambah_budget.dart';
+import 'package:counter_7/Page/data_budget.dart';
+import 'package:counter_7/Page/tambah_budget.dart';
 import 'package:flutter/services.dart';
 
 class User{

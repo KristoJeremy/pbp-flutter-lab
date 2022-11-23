@@ -1,8 +1,9 @@
+import 'package:counter_7/Page/my_watchlist.dart';
 import 'package:flutter/material.dart';
 import 'package:counter_7/main.dart';
-import 'package:counter_7/user.dart';
-import 'package:counter_7/data_budget.dart';
-import 'package:counter_7/tambah_budget.dart';
+import 'package:counter_7/Page/data_budget.dart';
+import 'package:counter_7/Page/tambah_budget.dart';
+
 Widget drawer(BuildContext context) {
 return Drawer(
       child: Column(
@@ -31,6 +32,15 @@ return Drawer(
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(builder: (context) => const DataBudgetPage()),
+              );
+            },
+          ),
+          ListTile(
+            title: const Text('My Watchlist'),
+            onTap: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => const WatchlistPage()),
               );
             },
           ),
